@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1 Palindrome Checker
+  p Examples of palindromes: Taco Cat, Racecar, noon
+  form(method="POST" action="/")
+    label(for="userText") Enter your text here:
+    br
+    input(type="text" id="userText" name="userText" value=`${phrase}`)
+    br
+    br
+    button(type="submit") Submit
+    if message
+      p=message
